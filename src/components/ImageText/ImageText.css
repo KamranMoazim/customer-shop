@@ -1,0 +1,327 @@
+.wrap-it {
+    width: 100%;
+    float: left;
+    padding-left: 24px;
+    padding-right: 24px;
+    margin-top: 36px;
+  }
+  
+  .second-wrap-it {
+    width: 100%;
+    float: left;
+    padding-left: 24px;
+    padding-right: 24px;
+    margin-top: 73px;
+  }
+  
+  .image-it {
+    width: 50%;
+    float: left;
+    padding-left: 15px;
+    /* text-align: center; */
+  }
+  
+  .second-image-it {
+    width: 50%;
+    float: left;
+    padding-left: 15px;
+    /* text-align: center; */
+  }
+  
+  .handle-it {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 45px;
+  }
+  
+  .second-handle-it {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 45px;
+  }
+  
+  .main-heading-it {
+    font-size: 32px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.87);
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .second-main-heading-it {
+    font-size: 32px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.87);
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .second-sub-heading-it {
+    font-size: 16px;
+    margin-top: 23px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.87);
+    font-family: 'Roboto', sans-serif;
+  }
+  .shop-it {
+    margin-top: 29px;
+  }
+  
+  .second-shop-it {
+    margin-top: 29px;
+  }
+  
+  .shop-it .MuiButton-containedPrimary {
+    background-color: rgba(0, 0, 0, 0.87);
+    color: white;
+  }
+  
+  .shop-it button.MuiButtonBase-root.MuiButton-root.MuiButton-contained {
+    background-color: rgba(0, 0, 0, 0.87);
+    color: white;
+  }
+  
+  .shop-it .MuiButton-label {
+    text-transform: none !important;
+  }
+  
+  .second-shop-it .MuiButton-containedPrimary {
+    background-color: rgba(0, 0, 0, 0.87);
+    color: white;
+  }
+  
+  .second-shop-it button.MuiButtonBase-root.MuiButton-root.MuiButton-contained {
+    background-color: rgba(0, 0, 0, 0.87);
+    color: white;
+  }
+  
+  .second-shop-it .MuiButton-label {
+    text-transform: none !important;
+  }
+  
+  /* 
+    ##Device = Desktops
+    ##Screen = 1281px to higher resolution desktops
+  */
+  
+  @media (min-width: 1281px) {
+    /* .main-heading-it {
+      margin-top: 145px;
+    } */
+    /* CSS */
+  }
+  
+  /* 
+    ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px
+  */
+  @media (min-width: 1199px) and (max-width: 1280px) {
+    /* .main-heading-it {
+      margin-top: 110px;
+    } */
+    /* CSS */
+  }
+  
+  @media (min-width: 1025px) and (max-width: 1199px) {
+    /* .main-heading-it {
+      margin-top: 60px;
+    } */
+    /* CSS */
+  }
+  
+  /* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .image-it {
+      object-fit: cover !important;
+      width: 100%;
+      padding-left: 0px !important;
+    }
+  
+    .image-it img {
+      width: 100%;
+      object-fit: cover !important;
+    }
+  
+    .wrap-it {
+      padding-left: 0px !important;
+      padding-right: 0px !important;
+    }
+  
+    .handle-it {
+      width: 100%;
+      text-align: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    /* 2nd */
+    .second-image-it {
+      object-fit: cover !important;
+      width: 100%;
+      padding-left: 0px !important;
+    }
+  
+    .second-image-it img {
+      width: 100%;
+      object-fit: cover !important;
+    }
+  
+    .second-wrap-it {
+      padding-left: 0px !important;
+      padding-right: 0px !important;
+    }
+  
+    .second-handle-it {
+      width: 100%;
+      text-align: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .row.second-it {
+      flex-direction: column-reverse !important;
+    }
+  }
+  
+  /* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    /* CSS */
+  }
+  
+  /* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+  
+  @media (min-width: 481px) and (max-width: 767px) {
+    .image-it {
+      object-fit: cover !important;
+      width: 100% !important;
+      padding-left: 0px !important;
+    }
+  
+    .image-it img {
+      width: 100%;
+      object-fit: cover !important;
+    }
+  
+    .wrap-it {
+      padding-left: 0px !important;
+      padding-right: 0px !important;
+    }
+  
+    .handle-it {
+      width: 100%;
+      text-align: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    /* 2nd */
+    .second-image-it {
+      object-fit: cover !important;
+      width: 100% !important;
+      padding-left: 0px !important;
+    }
+  
+    .second-image-it img {
+      width: 100%;
+      object-fit: cover !important;
+    }
+  
+    .second-wrap-it {
+      padding-left: 0px !important;
+      padding-right: 0px !important;
+    }
+  
+    .second-handle-it {
+      width: 100%;
+      text-align: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .row.second-it {
+      flex-direction: column-reverse !important;
+    }
+  
+    .row.second-it {
+      flex-direction: inherit !important;
+    }
+    /* CSS */
+  }
+  
+  /* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+    .image-it {
+      object-fit: cover !important;
+      width: 100% !important;
+      padding-left: 0px !important;
+    }
+  
+    .image-it img {
+      width: 100%;
+      object-fit: cover !important;
+    }
+  
+    .wrap-it {
+      padding-left: 0px !important;
+      padding-right: 0px !important;
+    }
+  
+    .handle-it {
+      width: 100%;
+      text-align: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    /* 2nd */
+    .second-image-it {
+      object-fit: cover !important;
+      width: 100% !important;
+      padding-left: 0px !important;
+    }
+  
+    .second-image-it img {
+      width: 100%;
+      object-fit: cover !important;
+    }
+  
+    .second-wrap-it {
+      padding-left: 0px !important;
+      padding-right: 0px !important;
+    }
+  
+    .second-handle-it {
+      width: 100%;
+      text-align: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .row.second-it {
+      flex-direction: column-reverse !important;
+    }
+    /* CSS */
+  }

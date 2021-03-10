@@ -1,0 +1,148 @@
+.outer-si {
+    width: 100%;
+    float: left;
+    padding-left: 24px;
+    padding-right: 24px;
+    margin-top: 72px;
+  }
+  
+  .title-main-ac {
+    padding: 22px;
+    font-size: 32px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif !important;
+    margin-top: 27px;
+    text-align: center;
+  }
+
+
+  .image-text-si {
+    width: 100%;
+    float: left;
+    padding-left: 24px;
+    padding-right: 9px;
+    margin-top: -12px;
+  }
+  
+  .image-inner-si {
+    height: 228px;
+    background-color: #fcfcfc;
+  }
+  
+  .main-text-si {
+    width: 100%;
+    float: left;
+    text-align: center;
+    font-size: 32px;
+    color: rgba(0, 0, 0, 0.87);
+    font-weight: bold;
+    margin-top: 43px;
+  }
+  
+  .sub-text-si {
+    width: 100%;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.87);
+    font-weight: 500;
+    margin-top: 30px;
+  }
+  
+  .button-si {
+    width: 100%;
+    float: left;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .button-si .MuiButton-containedPrimary {
+    background-color: rgba(0, 0, 0, 0.87);
+    color: white;
+  }
+  
+  
+  
+  .button-si button.MuiButtonBase-root.MuiButton-root.MuiButton-contained {
+    background-color: rgba(0, 0, 0, 0.87);
+    color: white;
+  }
+  
+  .button-si .MuiButton-label {
+    text-transform: none !important;
+  }
+  
+  /* 
+    ##Device = Desktops
+    ##Screen = 1281px to higher resolution desktops
+  */
+  
+  @media (min-width: 1281px) {
+    /* CSS */
+  }
+  
+  /* 
+      ##Device = Laptops, Desktops
+      ##Screen = B/w 1025px to 1280px
+    */
+  
+  @media (min-width: 1025px) and (max-width: 1280px) {
+    /* CSS */
+  }
+  
+  /* 
+      ##Device = Tablets, Ipads (portrait)
+      ##Screen = B/w 768px to 1024px
+    */
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
+    /* CSS */
+  }
+  
+  /* 
+      ##Device = Tablets, Ipads (landscape)
+      ##Screen = B/w 768px to 1024px
+    */
+  
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    /* CSS */
+  }
+  
+  /* 
+      ##Device = Low Resolution Tablets, Mobiles (Landscape)
+      ##Screen = B/w 481px to 767px
+    */
+  @media (min-width: 576px) and (max-width: 767px) {
+    /* CSS */
+  }
+  
+  @media (min-width: 481px) and (max-width: 575px) {
+    .sub-text-si {
+      font-size: 14px;
+    }
+    /* CSS */
+  }
+  
+  /* 
+      ##Device = Most of the Smartphones Mobiles (Portrait)
+      ##Screen = B/w 320px to 479px
+    */
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+    .main-text-si {
+      margin-top: 13px;
+      font-size: 23px;
+    }
+  
+    .sub-text-si {
+      margin-top: 15px;
+      font-size: 14px;
+    }
+  
+    .button-si {
+      margin-top: 25px;
+    }
+    /* CSS */
+  }
+
+

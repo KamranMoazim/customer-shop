@@ -1,0 +1,15 @@
+.map-mc {
+    width: 100%;
+    float: left;
+    margin-top: 56px;
+    height: 60px;
+    border: 1px solid #fcfcfc;
+    height: 200px !important;
+    /* background-color: orange; */
+    border-radius: 4px;
+  }
+  
+  .map-mc embed {
+    width: 100% !important;
+    height: 250px;
+  }
