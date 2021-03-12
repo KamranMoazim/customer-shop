@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import {Bench,Door,Fabrication,Gate,Grill,Stair,MetallicStructure,PotStand,Railing,Shelf,Stand,Table,Window} from './graphql/index.js'
+import {Chair,ClotheRack,PlantStand,Shelf,Sofa,Stool,Table} from './graphql/index.js'
 import { Query } from 'react-apollo';
 import {useRouteMatch} from 'react-router-dom';
 import {Link} from 'react-router-dom'
@@ -23,52 +23,83 @@ function ProductDetails({comingQuery}) {
     newRequired2 = newRequired2.replace(" ", "")
     // console.log(newRequired2)
 
-    if (newRequired === "benches") {
-      comingQuery = Bench
-      newRequired = "bench"
-    } else if (newRequired === "doors") {
-      comingQuery = Door
-      newRequired = "door"
-    } else if (newRequired === "fabrications") {
-      comingQuery = Fabrication
-      newRequired = "fabrication"
-    } else if (newRequired === "gates") {
-      comingQuery = Gate
-      newRequired = "gate"
-    } else if (newRequired === "grills") {
-      comingQuery = Grill
-      newRequired = "grill"
-    } else if (newRequired === "stairs") {
-      comingQuery = Stair
-      newRequired = "stair"
-    } else if (newRequired === "railings") {
-      comingQuery = Railing
-      newRequired = "railing"
-    } else if (newRequired === "shelves") {
+    if (newRequired.includes("chairs")) {
+
+      comingQuery = Chair
+      newRequired = "chair"
+
+    } else if (newRequired.includes("clotheRacks")) {
+
+      comingQuery = ClotheRack
+      newRequired = "clotheRack"
+
+    } else if (newRequired.includes("plantStands")) {
+
+      comingQuery = PlantStand
+      newRequired = "plantStand"
+
+    } else if (newRequired.includes("shelves")) {
+
       comingQuery = Shelf
       newRequired = "shelf"
-    } else if (newRequired === "stands") {
-      comingQuery = Stand
-      newRequired = "stand"
-    } else if (newRequired === "tables") {
+
+    } else if (newRequired.includes("sofas")) {
+
+      comingQuery = Sofa
+      newRequired = "sofa"
+
+    } else if (newRequired.includes("stools")) {
+
+      comingQuery = Stool
+      newRequired = "stool"
+
+    } else if (newRequired.includes("tables")) {
+      
       comingQuery = Table
       newRequired = "table"
-    } else if (newRequired === "windows") {
-      comingQuery = Window
-      newRequired = "window"
-    } else if (newRequired === "metallicStructures") {
-      comingQuery = MetallicStructure
-      newRequired = "metallicStructure"
-    } else if (newRequired === "potStands") {
-      comingQuery = PotStand
-      newRequired = "potStand"
+
     }
 
 
+
+
+// if (newRequired === "benches") {
+//   comingQuery = Bench
+//   newRequired = "bench"
+// }
+//  else if (newRequired === "windows") {
+//   comingQuery = Window
+//   newRequired = "window"
+// } else if (newRequired === "metallicStructures") {
+//   comingQuery = MetallicStructure
+//   newRequired = "metallicStructure"
+// } else if (newRequired === "stands") {
+//   comingQuery = Stand
+//   newRequired = "stand"
+// } else if (newRequired === "doors") {
+//   comingQuery = Door
+//   newRequired = "door"
+// } else if (newRequired === "fabrications") {
+//   comingQuery = Fabrication
+//   newRequired = "fabrication"
+// } else if (newRequired === "gates") {
+//   comingQuery = Gate
+//   newRequired = "gate"
+// } else if (newRequired === "grills") {
+//   comingQuery = Grill
+//   newRequired = "grill"
+// } else if (newRequired === "stairs") {
+//   comingQuery = Stair
+//   newRequired = "stair"
+// } else if (newRequired === "railings") {
+//   comingQuery = Railing
+//   newRequired = "railing"
+// }
+
+
+
+
     const [activeUrl, setActiveUrl] = useState(0);
-
-
-
 
     return (
         <Query query={comingQuery} variables={({itemCode:newRequired2})}>

@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom'
 
 const BedCard = ({data=[]}) => {
 
-  console.log(data);
+  // console.log(data);
 
   if (data.length) {
     return (

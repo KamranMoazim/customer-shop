@@ -25,7 +25,7 @@ const SingleImage = () => {
                     console.log(error)
                     return <div>Error</div>}
                 const items = data.latests
-                console.log(data);
+                // console.log(data);
                 return (
                     <>
                         {items.map((item,index)=>{
