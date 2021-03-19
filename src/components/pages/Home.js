@@ -23,7 +23,7 @@ function Home() {
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>Iqra Steel Works</title>
-                <link rel="canonical" href="https://iqrasteelworks.com" />
+                {/* <link rel="canonical" href="https://iqrasteelworks.com" /> */}
                 <meta name="description" content="" />
             </Helmet>
 

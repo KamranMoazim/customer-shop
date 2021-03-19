@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
 import './Card.css'
-
+// import {Helmet} from "react-helmet";
 
 function toTitleCase(str) {
   return str.replace(
@@ -29,7 +29,7 @@ function Card({heading="All Categories", buttonText="Show More", subCat="", data
 
             return <li className="cards_item" key={index}>
                       <div className="card">
-                        <div className="card_image"><img src={each.images[0].url} alt="" /></div>
+                        <div className="card_image"><img src={each.images[0].url} alt={each.name} /></div>
                         <div className="card_content">
                           <h2 className="card_title" style={{fontSize:"30px", textAlign:"center", marginBottom:"20px"}}>{each.name}</h2>
                           <p className="card_title" style={{fontSize:"17px", textAlign:"center", marginBottom:"10px"}}>{parseInt(each.price[0])!==0?"Estimation Rs."+each.price[0]+"/-":null}</p>
@@ -53,8 +53,11 @@ function Card({heading="All Categories", buttonText="Show More", subCat="", data
   <ul className="cards">
     {data.map((each, index) => {
       return <li className="cards_item" key={index}>
+                {/* <Helmet>
+                    <meta name="description" content="" />
+                </Helmet> */}
                 <div className="card">
-                  <div className="card_image"><img src={each.image[0].url} alt="" /></div>
+                  <div className="card_image"><img src={each.image[0].url} alt={each.name} /></div>
                   <div className="card_content">
                     <h2 className="card_title" style={{fontSize:"30px", textAlign:"center", marginBottom:"10px"}}>{each.name}</h2>
                     <Link to={`/categories/:${each.name}`}><button className="btn card_btn"> {buttonText}</button></Link>

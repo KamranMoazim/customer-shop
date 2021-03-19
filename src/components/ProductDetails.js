@@ -9,6 +9,7 @@ import  "./ProductDetails.css"
 import './ImageText/ImageText.css'
 
 import ReactHtmlParser from 'react-html-parser';
+import {Helmet} from "react-helmet";
 
 function ProductDetails({comingQuery}) {
 
@@ -157,6 +158,9 @@ function ProductDetails({comingQuery}) {
                           <br/>
                           <br/>
                             <b><h3>Description</h3></b>
+                            <Helmet>
+                                <meta name="description" content={item.description.html.toStrings()} />
+                            </Helmet>
                             <span className="liHandler">{ReactHtmlParser(item.description.html)}</span>
                           <br/>
                           <br/>
