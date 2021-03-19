@@ -46,6 +46,7 @@ function EachCategory({comingQuery}) {
       newRequired = "shelves"
 
     } else if (newRequired.includes("Sofa")) {
+      // console.log("helllo")
 
       comingQuery = Sofas
       newRequired = "sofas"

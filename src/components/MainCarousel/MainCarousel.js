@@ -10,7 +10,7 @@ import img3 from '../../static/1440 536 new 3.jpg';
 // import img4 from '../../static/1440 536 new 4.jpg';
 // import img5 from '../../static/1440 536 new 5.jpg';
 import img6 from '../../static/1440 536 new 6.jpg';
-import img7 from '../../static/1440 536 new 7.jpg';
+// import img7 from '../../static/1440 536 new 7.jpg';
 import img8 from '../../static/1440 536 new 8.jpg';
 import img9 from '../../static/1440 536 new 9.jpg';
 import img10 from '../../static/1440 536 new 10.jpg';
@@ -100,13 +100,13 @@ class MainCarousel extends Component {
               />
             </Carousel.Item>
 
-            <Carousel.Item>
+            {/* <Carousel.Item>
               <img
                 className='d-block w-100 carousel-img-mc'
                 src={img7}
                 alt='Third slide'
               />
-            </Carousel.Item>
+            </Carousel.Item> */}
 
             <Carousel.Item>
               <img

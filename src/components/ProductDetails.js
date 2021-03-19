@@ -153,7 +153,7 @@ function ProductDetails({comingQuery}) {
                           <span style={{color:"black"}}>Item Code <Badge variant="warning"><b style={{fontSize:"17px"}}>{item.itemCode}</b></Badge></span>
                           <br/>
                           <br/>
-                          Estimated Price : <Badge variant="dark"><b style={{fontSize:"17px"}}>{item.price?"Rs. "+item.price:null}</b> </Badge>
+                          Estimated Price : <Badge variant="dark"><b style={{fontSize:"17px"}}>{item.price[0]!==0?"Rs. "+item.price[0]:null}</b> </Badge>
                           <br/>
                           <br/>
                             <b><h3>Description</h3></b>

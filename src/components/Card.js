@@ -25,13 +25,14 @@ function Card({heading="All Categories", buttonText="Show More", subCat="", data
         <h2 style={{padding:"10px", marginTop:"20px", fontSize:"50px", textAlign:"center"}}>All {toTitleCase(heading)}</h2>
         <ul className="cards">
           {data.map((each, index) => {
+            // console.log(each);
 
             return <li className="cards_item" key={index}>
                       <div className="card">
                         <div className="card_image"><img src={each.images[0].url} alt="" /></div>
                         <div className="card_content">
                           <h2 className="card_title" style={{fontSize:"30px", textAlign:"center", marginBottom:"20px"}}>{each.name}</h2>
-                          <p className="card_title" style={{fontSize:"17px", textAlign:"center", marginBottom:"10px"}}>{each.price?"Estimation Rs."+each.price:null}/-</p>
+                          <p className="card_title" style={{fontSize:"17px", textAlign:"center", marginBottom:"10px"}}>{parseInt(each.price[0])!==0?"Estimation Rs."+each.price[0]+"/-":null}</p>
                           <p className="card_title" style={{fontSize:"17px", textAlign:"center", marginBottom:"10px"}}>Item code&nbsp; {each.itemCode}</p>
                           <Link to={`/categories/:${subCat}/:${each.name}/:${each.itemCode}`}><button className="btn card_btn">{buttonText}</button></Link>
                         </div>
