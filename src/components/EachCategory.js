@@ -5,61 +5,61 @@ import {Chairs,ClotheRacks,PlantStands,Shelves,Sofas,Stools,Tables} from './grap
 import { Query } from 'react-apollo';
 import Card from './Card'
 
-function EachCategory({comingQuery}) {
 
-    // function openNav() {
-    //     document.getElementById("mySidenav").style.width = "30%";
-    // }
-    // function closeNav() {
-    //     document.getElementById("mySidenav").style.width = "0";
-    // }
+let sendingSeoDesc=""
+
+function EachCategory({comingQuery}) {
 
     let { url } = useRouteMatch();
 
     // console.log(url)
     
     let required = url.split(":")
-    
     let newRequired = required[required.length - 1]
     
     // console.log(newRequired)
-
 
     if (newRequired.includes('Chairs')) {
 
       comingQuery = Chairs
       newRequired = "chairs"
+      sendingSeoDesc = " Chairs Chairs Chairs Chairs Chairs Chairs Chairs Chairs Chairs Chairs Chairs Chairs Chairs Chairs Chairs Chairs Chairs Chairs Chairs Chairs Chairs "
 
     } else if (newRequired.includes('Clothe')) {
 
       comingQuery = ClotheRacks
       newRequired = "clotheRacks"
+      sendingSeoDesc = "ClotheRacks ClotheRacks ClotheRacks ClotheRacks ClotheRacks ClotheRacks ClotheRacks ClotheRacks ClotheRacks ClotheRacks ClotheRacks ClotheRacks "
 
     } else if (newRequired.includes("Plant")) {
 
       comingQuery = PlantStands
       newRequired = "plantStands"
+      sendingSeoDesc = "PlantStands PlantStands PlantStands PlantStands PlantStands PlantStands PlantStands PlantStands PlantStands PlantStands PlantStands PlantStands "
 
     } else if (newRequired.includes('Shelf')) {
 
       comingQuery = Shelves
       newRequired = "shelves"
+      sendingSeoDesc = ""
 
     } else if (newRequired.includes("Sofa")) {
-      // console.log("helllo")
 
       comingQuery = Sofas
       newRequired = "sofas"
+      sendingSeoDesc = ""
 
     } else if (newRequired.includes('Stool')) {
 
       comingQuery = Stools
       newRequired = "stools"
+      sendingSeoDesc = ""
 
     } else if (newRequired.includes("Tables")) {
 
       comingQuery = Tables
       newRequired = "tables"
+      sendingSeoDesc = ""
 
     }
 
@@ -119,25 +119,11 @@ function EachCategory({comingQuery}) {
                 return (
                     <>
 
-                      {/* <div className="row"> */}
-
-                        {/* <div className="side">
-                          <div id="mySidenav" className="sidenav">
-                          <a href="javascript:void(0)" className="closebtn" onClick={closeNav}>&times;</a>
-                          <a href="#">About</a>
-                          <a href="#">Services</a>
-                          <a href="#">Clients</a>
-                          <a href="#">Contact</a>
-                          </div>
-                          <span style={{fontSize:"30px",cursor:"pointer"}} onClick={openNav}>&#9776; Sort BY:</span>
-                        </div> */}
-
                         <div className="main">
-                          <Card data={items} buttonText="Show Details" heading={newRequired} subCat={newRequired} />
-                          {/* <p>o</p> */}
+
+                          <Card data={items} buttonText="Show Details" heading={newRequired} subCat={newRequired} seoDesc={sendingSeoDesc} />
                         </div>
 
-                      {/* </div> */}
                     </>
                 )
                 }} 

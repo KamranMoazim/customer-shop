@@ -10,10 +10,6 @@ query MyQuery {
     name
     price
     itemCode
-    addingDate
-    description {
-      html
-    }
     images {
       url(transformation: {validateOptions: false})
     }
@@ -29,8 +25,8 @@ query MyQuery($itemCode: String!) {
     itemCode
     description {
       html
+      text
     }
-    addingDate
     images {
       url
     }
@@ -48,10 +44,6 @@ query MyQuery {
     name
     price
     itemCode
-    addingDate
-    description {
-      html
-    }
     images {
       url(transformation: {validateOptions: false})
     }
@@ -67,8 +59,8 @@ query MyQuery($itemCode: String!) {
     itemCode
     description {
       html
+      text
     }
-    addingDate
     images {
       url
     }
@@ -86,10 +78,6 @@ query MyQuery {
     name
     price
     itemCode
-    addingDate
-    description {
-      html
-    }
     images {
       url(transformation: {validateOptions: false})
     }
@@ -105,8 +93,8 @@ query MyQuery($itemCode: String!) {
     itemCode
     description {
       html
+      text
     }
-    addingDate
     images {
       url
     }
@@ -125,10 +113,6 @@ query MyQuery {
     name
     price
     itemCode
-    addingDate
-    description {
-      html
-    }
     images {
       url(transformation: {validateOptions: false})
     }
@@ -143,8 +127,8 @@ query MyQuery($itemCode: String!) {
     itemCode
     description {
       html
+      text
     }
-    addingDate
     images {
       url
     }
@@ -162,10 +146,6 @@ query MyQuery {
     name
     price
     itemCode
-    addingDate
-    description {
-      html
-    }
     images {
       url(transformation: {validateOptions: false})
     }
@@ -180,8 +160,8 @@ query MyQuery($itemCode: String!) {
     itemCode
     description {
       html
+      text
     }
-    addingDate
     images {
       url
     }
@@ -198,10 +178,6 @@ query MyQuery {
     name
     price
     itemCode
-    addingDate
-    description {
-      html
-    }
     images {
       url(transformation: {validateOptions: false})
     }
@@ -216,8 +192,8 @@ query MyQuery($itemCode: String!) {
     itemCode
     description {
       html
+      text
     }
-    addingDate
     images {
       url
     }
@@ -235,10 +211,6 @@ query MyQuery {
     name
     price
     itemCode
-    addingDate
-    description {
-      html
-    }
     images {
       url(transformation: {validateOptions: false})
     }
@@ -253,8 +225,8 @@ query MyQuery($itemCode: String!) {
     itemCode
     description {
       html
+      text
     }
-    addingDate
     images {
       url
     }

@@ -35,6 +35,7 @@ function ProductDetails({comingQuery}) {
       newRequired = "clotheRack"
 
     } else if (newRequired.includes("plantStands")) {
+      // console.log(newRequired)
 
       comingQuery = PlantStand
       newRequired = "plantStand"
@@ -135,7 +136,22 @@ function ProductDetails({comingQuery}) {
                         </div>
                         <div>
                           {item.images.map((eachImage, index)=>{
-                            return <img className="thumbnail12" src={eachImage.url} key={index} alt={item.name} onClick={()=>setActiveUrl(index)} />
+                            return <div key={index}>
+                                    <img className="thumbnail12" src={eachImage.url} alt={item.name} onClick={()=>setActiveUrl(index)} />
+                                    <Helmet>
+                                        <meta name="description" content={item.description.text.substr(0, 160)} />
+                                        <meta name="keywords" content={item.description.text.substr(0, 160)} />
+                                        {/* for Facebook */}
+                                        <meta name="og:title" content={`${item.name} By Iqra Steel Works`} />
+                                        <meta name="og:description" content={item.description.text.substr(0, 160)} />
+                                        <meta name="og:image" content={eachImage.url} />
+                                        <meta name="og:url" content={`https://iqrasteelworks.com${url}`} />
+                                        {/* for Twitter */}
+                                        <meta name="twitter:title" content={`${item.name} By Iqra Steel Works`} />
+                                        <meta name="twitter:description" content={item.description.text.substr(0, 160)} />
+                                        <meta name="twitter:image" content={eachImage.url} />
+                                    </Helmet>
+                                    </div>
                           })}
                         </div>
 
@@ -158,9 +174,6 @@ function ProductDetails({comingQuery}) {
                           <br/>
                           <br/>
                             <b><h3>Description</h3></b>
-                            <Helmet>
-                                <meta name="description" content={item.description.html.toStrings()} />
-                            </Helmet>
                             <span className="liHandler">{ReactHtmlParser(item.description.html)}</span>
                           <br/>
                           <br/>
