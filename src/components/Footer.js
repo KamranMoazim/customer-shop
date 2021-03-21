@@ -45,7 +45,7 @@ function Footer() {
                         Our aim, since 1985, is to provide the full spectrum of Iron Works in Pakistan.</p>
                     <div className="fa footer-icons">
                         <a href="https://www.facebook.com/iqrasteelsworks" target="_blank" rel="noreferrer"><i className="fa fa-facebook"></i></a>
-                        <a href="https://wa.me/923204870905" target="_blank" rel="noreferrer"><i className="fab fa-whatsapp" ></i></a>
+                        <a href="https://wa.me/923204870905" target="_blank" rel="noreferrer"><i className="fa fa-whatsapp" ></i></a>
                         <a href="https://www.instagram.com/iqrasteelworks" target="_blank" rel="noreferrer"><i className="fa fa-instagram"></i></a>
                         <a href="tel:+923204870905" target="_blank" rel="noreferrer"><i className="fa fa-phone"></i></a>
                         <a href="sms:+923204870905" target="_blank" rel="noreferrer"><i className="fas fa-sms"></i></a>
