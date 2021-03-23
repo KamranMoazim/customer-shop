@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import {Chair,ClotheRack,PlantStand,Shelf,Sofa,Stool,Table} from './graphql/index.js'
+import {Chair,ClotheRack,PlantStand,Shelf,Sofa,Stool,CenterTable,ConsoleTable,SideTable,StudyAndOfficeTable} from './graphql/index.js'
 import { Query } from 'react-apollo';
 import {useRouteMatch} from 'react-router-dom';
 import {Link} from 'react-router-dom'
@@ -55,10 +55,25 @@ function ProductDetails({comingQuery}) {
       comingQuery = Stool
       newRequired = "stool"
 
-    } else if (newRequired.includes("tables")) {
+    } else if (newRequired.includes("centerTables")) {
       
-      comingQuery = Table
-      newRequired = "table"
+      comingQuery = CenterTable
+      newRequired = "centerTable"
+
+    } else if (newRequired.includes("consoleTables")) {
+      
+      comingQuery = ConsoleTable
+      newRequired = "consoleTable"
+
+    } else if (newRequired.includes("sideTables")) {
+      
+      comingQuery = SideTable
+      newRequired = "sideTable"
+
+    } else if (newRequired.includes("studyAndOfficeTables")) {
+      
+      comingQuery = StudyAndOfficeTable
+      newRequired = "studyAndOfficeTable"
 
     }
 

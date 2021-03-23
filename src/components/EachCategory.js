@@ -1,12 +1,13 @@
 import React from 'react'
 import './EachCategory.css'
 import {useRouteMatch} from 'react-router-dom';
-import {Chairs,ClotheRacks,PlantStands,Shelves,Sofas,Stools,Tables} from './graphql/index.js'
+import {Chairs,ClotheRacks,PlantStands,Shelves,Sofas,Stools,CenterTables,ConsoleTables,SideTables,StudyAndOfficeTables} from './graphql/index.js'
 import { Query } from 'react-apollo';
 import Card from './Card'
 
 
 let sendingSeoDesc=""
+let heading = ""
 
 function EachCategory({comingQuery}) {
 
@@ -23,42 +24,70 @@ function EachCategory({comingQuery}) {
 
       comingQuery = Chairs
       newRequired = "chairs"
+      heading = "chairs"
       sendingSeoDesc = " Chairs Chairs Chairs Chairs Chairs Chairs Chairs Chairs Chairs Chairs Chairs Chairs Chairs Chairs Chairs Chairs Chairs Chairs Chairs Chairs Chairs "
 
     } else if (newRequired.includes('Clothe')) {
 
       comingQuery = ClotheRacks
       newRequired = "clotheRacks"
+      heading = "clothe Racks"
       sendingSeoDesc = "ClotheRacks ClotheRacks ClotheRacks ClotheRacks ClotheRacks ClotheRacks ClotheRacks ClotheRacks ClotheRacks ClotheRacks ClotheRacks ClotheRacks "
 
     } else if (newRequired.includes("Plant")) {
 
       comingQuery = PlantStands
       newRequired = "plantStands"
+      heading = "plant Stands"
       sendingSeoDesc = "PlantStands PlantStands PlantStands PlantStands PlantStands PlantStands PlantStands PlantStands PlantStands PlantStands PlantStands PlantStands "
 
     } else if (newRequired.includes('Shelf')) {
 
       comingQuery = Shelves
       newRequired = "shelves"
+      heading = "shelves"
       sendingSeoDesc = ""
 
     } else if (newRequired.includes("Sofa")) {
 
       comingQuery = Sofas
       newRequired = "sofas"
+      heading = "sofas"
       sendingSeoDesc = ""
 
     } else if (newRequired.includes('Stool')) {
 
       comingQuery = Stools
       newRequired = "stools"
+      heading = "stools"
       sendingSeoDesc = ""
 
-    } else if (newRequired.includes("Tables")) {
+    } else if (newRequired.includes("Center")) {
 
-      comingQuery = Tables
-      newRequired = "tables"
+      comingQuery = CenterTables
+      newRequired = "centerTables"
+      heading = "center Tables"
+      sendingSeoDesc = ""
+
+    } else if (newRequired.includes("Console")) {
+
+      comingQuery = ConsoleTables
+      newRequired = "consoleTables"
+      heading = "console Tables"
+      sendingSeoDesc = ""
+
+    } else if (newRequired.includes("Side")) {
+
+      comingQuery = SideTables
+      newRequired = "sideTables"
+      heading = "side Tables"
+      sendingSeoDesc = ""
+
+    } else if (newRequired.includes("Study")) {
+
+      comingQuery = StudyAndOfficeTables
+      newRequired = "studyAndOfficeTables"
+      heading = "study And Office Tables"
       sendingSeoDesc = ""
 
     }
@@ -121,7 +150,7 @@ function EachCategory({comingQuery}) {
 
                         <div className="main">
 
-                          <Card data={items} buttonText="Show Details" heading={newRequired} subCat={newRequired} seoDesc={sendingSeoDesc} />
+                          <Card data={items} buttonText="Show Details" heading={heading} subCat={newRequired} seoDesc={sendingSeoDesc} />
                         </div>
 
                     </>

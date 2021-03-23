@@ -205,9 +205,9 @@ query MyQuery($itemCode: String!) {
 
 
 
-export const Tables = gql`
+export const CenterTables = gql`
 query MyQuery {
-  tables {
+  centerTables {
     name
     price
     itemCode
@@ -217,9 +217,9 @@ query MyQuery {
   }
 }
 `;
-export const Table = gql`
+export const CenterTable = gql`
 query MyQuery($itemCode: String!) {
-  table(where: {itemCode: $itemCode}) {
+  centerTable(where: {itemCode: $itemCode}) {
     name
     price
     itemCode
@@ -233,6 +233,134 @@ query MyQuery($itemCode: String!) {
   }
 }
 `;
+
+
+
+
+export const ConsoleTables = gql`
+query MyQuery {
+  consoleTables {
+    name
+    price
+    itemCode
+    images {
+      url(transformation: {validateOptions: false})
+    }
+  }
+}
+`;
+export const ConsoleTable = gql`
+query MyQuery($itemCode: String!) {
+  consoleTable(where: {itemCode: $itemCode}) {
+    name
+    price
+    itemCode
+    description {
+      html
+      text
+    }
+    images {
+      url
+    }
+  }
+}
+`;
+
+
+
+
+export const SideTables = gql`
+query MyQuery {
+  sideTables {
+    name
+    price
+    itemCode
+    images {
+      url(transformation: {validateOptions: false})
+    }
+  }
+}
+`;
+export const SideTable = gql`
+query MyQuery($itemCode: String!) {
+  sideTable(where: {itemCode: $itemCode}) {
+    name
+    price
+    itemCode
+    description {
+      html
+      text
+    }
+    images {
+      url
+    }
+  }
+}
+`;
+
+
+
+
+export const StudyAndOfficeTables = gql`
+query MyQuery {
+  studyAndOfficeTables {
+    name
+    price
+    itemCode
+    images {
+      url(transformation: {validateOptions: false})
+    }
+  }
+}
+`;
+export const StudyAndOfficeTable = gql`
+query MyQuery($itemCode: String!) {
+  studyAndOfficeTable(where: {itemCode: $itemCode}) {
+    name
+    price
+    itemCode
+    description {
+      html
+      text
+    }
+    images {
+      url
+    }
+  }
+}
+`;
+
+
+
+
+// export const Tables = gql`
+// query MyQuery {
+//   tables {
+//     name
+//     price
+//     itemCode
+//     images {
+//       url(transformation: {validateOptions: false})
+//     }
+//   }
+// }
+// `;
+// export const Table = gql`
+// query MyQuery($itemCode: String!) {
+//   table(where: {itemCode: $itemCode}) {
+//     name
+//     price
+//     itemCode
+//     description {
+//       html
+//       text
+//     }
+//     images {
+//       url
+//     }
+//   }
+// }
+// `;
 
 
 
