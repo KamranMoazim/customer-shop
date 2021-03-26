@@ -3,7 +3,7 @@ import './EachCategory.css'
 import {useRouteMatch} from 'react-router-dom';
 import {Chairs,ClotheRacks,PlantStands,Shelves,Sofas,Stools,CenterTables,ConsoleTables,SideTables,StudyAndOfficeTables} from './graphql/index.js'
 import { Query } from 'react-apollo';
-import Card from './Card'
+import Card2 from './Card2'
 
 
 let sendingSeoDesc=""
@@ -150,7 +150,7 @@ function EachCategory({comingQuery}) {
 
                         <div className="main">
 
-                          <Card data={items} buttonText="Show Details" heading={heading} subCat={newRequired} seoDesc={sendingSeoDesc} />
+                          <Card2 data={items} buttonText="Show Details" heading={heading} subCat={newRequired} seoDesc={sendingSeoDesc} />
                         </div>
 
                     </>
