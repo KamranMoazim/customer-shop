@@ -149,24 +149,9 @@ function ProductDetails({comingQuery}) {
                         <div className="hsf">
                           <img className="featured12" src={item.images[activeUrl].url} alt='Side' style={{padding:"15px"}} />
                         </div>
-                        <div>
+                        <div style={{display:"flex"}}>
                           {item.images.map((eachImage, index)=>{
-                            return <div key={index} style={{dispalay:"flex"}}>
-                                    <img className="thumbnail12" src={eachImage.url} alt={item.name} onClick={()=>setActiveUrl(index)} />
-                                    <Helmet>
-                                        <meta name="description" content={item.description.text.substr(0, 160)} />
-                                        <meta name="keywords" content={item.description.text.substr(0, 160)} />
-                                        {/* for Facebook */}
-                                        <meta name="og:title" content={`${item.name} By Iqra Steel Works`} />
-                                        <meta name="og:description" content={item.description.text.substr(0, 160)} />
-                                        <meta name="og:image" content={eachImage.url} />
-                                        <meta name="og:url" content={`https://iqrasteelworks.com${url}`} />
-                                        {/* for Twitter */}
-                                        <meta name="twitter:title" content={`${item.name} By Iqra Steel Works`} />
-                                        <meta name="twitter:description" content={item.description.text.substr(0, 160)} />
-                                        <meta name="twitter:image" content={eachImage.url} />
-                                    </Helmet>
-                                    </div>
+                               return <img className="thumbnail12" key={index} src={eachImage.url} alt={item.name} onClick={()=>setActiveUrl(index)} />
                           })}
                         </div>
 
@@ -177,9 +162,23 @@ function ProductDetails({comingQuery}) {
                       <div className='handle-it'>
 
                         {/* <div className='main-heading-it'>
-                        {each.price?"Estimation Rs."+each.price:null}/-
+                        {each.price?"Estimation Rs."+each.price:null}/-  
                           {item.name}
                         </div> */}
+
+                        <Helmet>
+                            <meta name="description" content={item.description.text.substr(0, 160)} />
+                            <meta name="keywords" content={item.description.text.substr(0, 160)} />
+                            {/* for Facebook */}
+                            <meta name="og:title" content={`${item.name} By Iqra Steel Works`} />
+                            <meta name="og:description" content={item.description.text.substr(0, 160)} />
+                            <meta name="og:image" content={item.images[0].url} />
+                            <meta name="og:url" content={`https://iqrasteelworks.com${url}`} />
+                            {/* for Twitter */}
+                            <meta name="twitter:title" content={`${item.name} By Iqra Steel Works`} />
+                            <meta name="twitter:description" content={item.description.text.substr(0, 160)} />
+                            <meta name="twitter:image" content={item.images[0].url} />
+                        </Helmet>
 
                         <div className='sub-heading-it'>
                           <span style={{color:"black"}}>Item Code <Badge variant="warning"><b style={{fontSize:"17px"}}>{item.itemCode}</b></Badge></span>
