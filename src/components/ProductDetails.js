@@ -11,9 +11,12 @@ import './ImageText/ImageText.css'
 import ReactHtmlParser from 'react-html-parser';
 import {Helmet} from "react-helmet";
 
+import {FacebookShareButton, FacebookIcon, WhatsappShareButton, WhatsappIcon, FacebookMessengerShareButton, FacebookMessengerIcon} from "react-share";
+
 function ProductDetails({comingQuery}) {
 
     let { url } = useRouteMatch();
+    // console.log(url);
     let required = url.split(":")
 
     let newRequired = required[required.length - 3] // category
@@ -78,45 +81,9 @@ function ProductDetails({comingQuery}) {
     }
 
 
-
-
-// if (newRequired === "benches") {
-//   comingQuery = Bench
-//   newRequired = "bench"
-// }
-//  else if (newRequired === "windows") {
-//   comingQuery = Window
-//   newRequired = "window"
-// } else if (newRequired === "metallicStructures") {
-//   comingQuery = MetallicStructure
-//   newRequired = "metallicStructure"
-// } else if (newRequired === "stands") {
-//   comingQuery = Stand
-//   newRequired = "stand"
-// } else if (newRequired === "doors") {
-//   comingQuery = Door
-//   newRequired = "door"
-// } else if (newRequired === "fabrications") {
-//   comingQuery = Fabrication
-//   newRequired = "fabrication"
-// } else if (newRequired === "gates") {
-//   comingQuery = Gate
-//   newRequired = "gate"
-// } else if (newRequired === "grills") {
-//   comingQuery = Grill
-//   newRequired = "grill"
-// } else if (newRequired === "stairs") {
-//   comingQuery = Stair
-//   newRequired = "stair"
-// } else if (newRequired === "railings") {
-//   comingQuery = Railing
-//   newRequired = "railing"
-// }
-
-
-
-
     const [activeUrl, setActiveUrl] = useState(0);
+
+    // console.log(window.location.href);
 
     return (
         <Query query={comingQuery} variables={({itemCode:newRequired2})}>
@@ -134,8 +101,6 @@ function ProductDetails({comingQuery}) {
 
           return (
               <>
-              {/* <h2 style={{color:"black", textAlign:"center", marginTop:"30px"}}> {item.name}</h2> */}
-
               <h2 className='main-heading-it' style={{color:"black", textAlign:"center", marginTop:"30px"}}>
                 {item.name}
               </h2>
@@ -162,6 +127,21 @@ function ProductDetails({comingQuery}) {
 
                         {/* <div className='main-heading-it'>
                         {each.price?"Estimation Rs."+each.price:null}/-  
+
+
+                        <!-- AddToAny BEGIN -->
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+<a class="a2a_button_whatsapp"></a>
+<a class="a2a_button_facebook"></a>
+<a class="a2a_button_twitter"></a>
+<a class="a2a_button_copy_link"></a>
+<a class="a2a_button_facebook_messenger"></a>
+</div>
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END -->
+
+
                           {item.name}
                         </div> */}
 
@@ -193,12 +173,36 @@ function ProductDetails({comingQuery}) {
                           
                         </div>
 
-                        <div className='shop-it'>
-                          <Link to={`/appointment/:${item.itemCode}`}><Button variant='contained'>Make Appointment</Button></Link>
-                          {/* <a href={`/appointment`}><Button variant='contained'>Make Appointment</Button></a> */}
-                        </div>
+                          <div className='shop-it' style={{marginBottom:"30px"}}>
+                            <Link to={`/appointment/:${item.itemCode}`}><Button variant='contained'>Make Appointment</Button></Link>
+                          </div>
 
+                          <div>
+                          <div className="content-for-social-share" style={{justifyContent:"center"}}>
+                              <p><b>Share with Friends</b></p>
+                          </div>
+
+                            <div className="content-for-social-share">
+                              <span className="span-for-social-share">
+                                <FacebookShareButton url={window.location.href}>
+                                  <FacebookIcon size={"2rem"} round />
+                                </FacebookShareButton> 
+                              </span>
+                              <span className="span-for-social-share">
+                                <FacebookMessengerShareButton url={window.location.href}>
+                                  <FacebookMessengerIcon size={"2rem"} round />
+                                </FacebookMessengerShareButton>
+                              </span>
+                              <span className="span-for-social-share">
+                                <WhatsappShareButton url={window.location.href}>
+                                  <WhatsappIcon size={"2rem"} round />
+                                </WhatsappShareButton> 
+                              </span>
+                            </div>
+
+                          </div>
                       </div>
+
 
                     </div>
                   </div>
