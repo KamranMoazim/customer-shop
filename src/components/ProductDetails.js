@@ -135,9 +135,11 @@ function ProductDetails({comingQuery}) {
           return (
               <>
               {/* <h2 style={{color:"black", textAlign:"center", marginTop:"30px"}}> {item.name}</h2> */}
-              <div className='main-heading-it' style={{color:"black", textAlign:"center", marginTop:"30px"}}>
-                          {item.name}
-                        </div>
+
+              <h2 className='main-heading-it' style={{color:"black", textAlign:"center", marginTop:"30px"}}>
+                {item.name}
+              </h2>
+
               <div style={{color:"black"}}>
 
 
