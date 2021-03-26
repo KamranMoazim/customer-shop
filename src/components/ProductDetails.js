@@ -151,7 +151,7 @@ function ProductDetails({comingQuery}) {
                         </div>
                         <div>
                           {item.images.map((eachImage, index)=>{
-                            return <div key={index}>
+                            return <div key={index} style={{dispalay:"flex"}}>
                                     <img className="thumbnail12" src={eachImage.url} alt={item.name} onClick={()=>setActiveUrl(index)} />
                                     <Helmet>
                                         <meta name="description" content={item.description.text.substr(0, 160)} />
