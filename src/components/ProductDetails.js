@@ -11,7 +11,7 @@ import './ImageText/ImageText.css'
 import ReactHtmlParser from 'react-html-parser';
 import {Helmet} from "react-helmet";
 
-import {FacebookShareButton, FacebookIcon, WhatsappShareButton, WhatsappIcon, FacebookMessengerShareButton, FacebookMessengerIcon} from "react-share";
+import {FacebookShareButton, FacebookIcon, WhatsappShareButton, WhatsappIcon, FacebookMessengerShareButton, FacebookMessengerIcon, TelegramShareButton, TelegramIcon, TwitterShareButton, TwitterIcon} from "react-share";
 
 function ProductDetails({comingQuery}) {
 
@@ -197,6 +197,16 @@ function ProductDetails({comingQuery}) {
                                 <WhatsappShareButton url={window.location.href}>
                                   <WhatsappIcon size={"2rem"} round />
                                 </WhatsappShareButton> 
+                              </span>
+                              <span className="span-for-social-share">
+                                <TwitterShareButton url={window.location.href}>
+                                  <TwitterIcon size={"2rem"} round />
+                                </TwitterShareButton> 
+                              </span>
+                              <span className="span-for-social-share">
+                                <TelegramShareButton url={window.location.href}>
+                                  <TelegramIcon size={"2rem"} round />
+                                </TelegramShareButton> 
                               </span>
                             </div>
 
