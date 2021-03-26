@@ -144,7 +144,6 @@ function ProductDetails({comingQuery}) {
                   <div className='wrap-it'>
                     {/* 1st 50% */}
                     <div className='row'>
-
                       <div className='image-it'>
                         <div className="hsf">
                           <img className="featured12" src={item.images[activeUrl].url} alt='Side' style={{padding:"15px"}} />
@@ -154,8 +153,6 @@ function ProductDetails({comingQuery}) {
                                return <img className="thumbnail12" key={index} src={eachImage.url} alt={item.name} onClick={()=>setActiveUrl(index)} />
                           })}
                         </div>
-
-
                       </div>
 
                       {/* 2nd 50% */}

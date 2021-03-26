@@ -69,14 +69,18 @@ function Card2({heading="All Categories", buttonText="Show More", subCat="", seo
         </Helmet>
 
 
-        <h2 style={{padding:"10px", marginTop:"20px", fontSize:"50px", textAlign:"center"}}>All {toTitleCase(heading)}</h2>
+        <h2 style={{padding:"10px", marginTop:"20px", fontSize:"50px", textAlign:"center"}}>All {toTitleCase(heading)} Collection</h2>
 
         <form className="form-horizontal">
-            <input type="text" className="form-control" onChange={(e) => setInputForEachCategory(e.target.value)} placeholder='Search By Name...' />
+            <input type="text" className="form-control" onChange={(e) => {
+              setInputForEachCategory(e.target.value)
+              e.preventDefault
+            }} placeholder='Search By Name...' />
             <div style={{marginTop:"5%"}}>
               <p>Price Range:</p>
               <input type="range" className="slidecontainer" min={0} max={200000} value={inputPriceForEachCategory} onChange={(e) => {
               setInputPriceForEachCategory(e.target.value);
+              e.preventDefault()
               }} />
               <h4>Rs.0 to Rs.{inputPriceForEachCategory}</h4>
             </div>
