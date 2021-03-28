@@ -166,7 +166,8 @@ function ProductDetails({comingQuery}) {
                           Estimated Price : <Badge variant="dark"><b style={{fontSize:"17px"}}>{item.price[0]!==0?"Rs. "+item.price[0]:null}</b> </Badge>
                           <br/>
                           <br/>
-                            <b><h3>Description</h3></b>
+                            {item.description.html?<b><h3>Description</h3></b>:null}
+                            {/* <b><h3>Description</h3></b> */}
                             <span className="liHandler">{ReactHtmlParser(item.description.html)}</span>
                           <br/>
                           <br/>
