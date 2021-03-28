@@ -41,21 +41,20 @@ let initialValues = {
 
 let itemCodeWorker;
 let worker1 = 0;
-let dataForWhatsapp = {};
+// let dataForWhatsapp = {};
 
 const onSubmit = (values, onSubmitProps) => {
 
     // console.log(values);
     // console.log(code);
     const savetoFauna = async()=>{
-    // var client = new faunadb.Client({ secret: "fnAEC613dnACDVzFZUJQLZu_gxBkJVKTfHFzzQes" });    03231445957
     var client = new faunadb.Client({ secret: process.env.REACT_APP_FAUNA_DB_KEY });
         try{
             const result = await client.query(
                 q.Create(q.Collection("orders"),{data:{status:"pending", orderCode:code, ...values}})
         );
         console.log(result);
-        dataForWhatsapp = {data:{status:"pending", orderCode:code, ...values}}
+        // dataForWhatsapp = {data:{status:"pending", orderCode:code, ...values}}
         itemCodeWorker=""
 
     } catch(err){
@@ -63,29 +62,19 @@ const onSubmit = (values, onSubmitProps) => {
     }      
   }
 
-      savetoFauna()
+  savetoFauna()
 
-    // async function fetchMoviesJSON() {
-    //   const response = await fetch(`https://api.callmebot.com/whatsapp.php?phone=+923204870905&text=You+have+a+client&apikey=913835`);
-    //   // const response = await fetch(`https://api.callmebot.com/whatsapp.php?phone=+923204870905&text=${JSON.stringify(values).toString()}&apikey=913835`);
-    //   // const sendedOrNot = await response.json();
-    //   return null;
-    // }      
+  fetch(`https://api.callmebot.com/whatsapp.php?phone=+923204870905&text=You+have+a+client&apikey=913835`);
+  fetch(`https://api.callmebot.com/whatsapp.php?phone=+923204870905&text=${values.name}&apikey=913835`);
+  fetch(`https://api.callmebot.com/whatsapp.php?phone=+923204870905&text=${values.itemCodes}&apikey=913835`);
+  fetch(`https://api.callmebot.com/whatsapp.php?phone=+923204870905&text=${values.email}&apikey=913835`);
+  fetch(`https://api.callmebot.com/whatsapp.php?phone=+923204870905&text=${values.whatsApp}&apikey=913835`);
+  fetch(`https://api.callmebot.com/whatsapp.php?phone=+923204870905&text=${values.address}&apikey=913835`);
+  fetch(`https://api.callmebot.com/whatsapp.php?phone=+923204870905&text=${values.city}&apikey=913835`);
+  fetch(`https://api.callmebot.com/whatsapp.php?phone=+923204870905&text=${values.zip}&apikey=913835`);
+  fetch(`https://api.callmebot.com/whatsapp.php?phone=+923204870905&text=${code}&apikey=913835`);
 
-    // let output = fetchMoviesJSON()
-    // console.log(output);
-
-    fetch(`https://api.callmebot.com/whatsapp.php?phone=+923204870905&text=You+have+a+client&apikey=913835`);
-    fetch(`https://api.callmebot.com/whatsapp.php?phone=+923204870905&text=${values.name}&apikey=913835`);
-    fetch(`https://api.callmebot.com/whatsapp.php?phone=+923204870905&text=${values.itemCodes}&apikey=913835`);
-    fetch(`https://api.callmebot.com/whatsapp.php?phone=+923204870905&text=${values.email}&apikey=913835`);
-    fetch(`https://api.callmebot.com/whatsapp.php?phone=+923204870905&text=${values.whatsApp}&apikey=913835`);
-    fetch(`https://api.callmebot.com/whatsapp.php?phone=+923204870905&text=${values.address}&apikey=913835`);
-    fetch(`https://api.callmebot.com/whatsapp.php?phone=+923204870905&text=${values.city}&apikey=913835`);
-    fetch(`https://api.callmebot.com/whatsapp.php?phone=+923204870905&text=${values.zip}&apikey=913835`);
-    fetch(`https://api.callmebot.com/whatsapp.php?phone=+923204870905&text=${code}&apikey=913835`);
-
-    worker1 = 1;
+  worker1 = 1;
 
   alert(`Your Form has submitted Successfully! Your Order Code is ${code}`);
 
