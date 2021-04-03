@@ -128,7 +128,7 @@ function EachCategory({comingQuery}) {
     // }
 
 
-    return (<>
+    return (<React.Fragment>
     <Query query={comingQuery} >
 
     {({ loading, error, data }) => {
@@ -146,14 +146,13 @@ function EachCategory({comingQuery}) {
                 // let data1 = items
 
                 return (
-                    <>
+                    <React.Fragment>
 
                         <div className="main">
-
                           <Card2 data={items} buttonText="Show Details" heading={heading} subCat={newRequired} seoDesc={sendingSeoDesc} />
                         </div>
 
-                    </>
+                    </React.Fragment>
                 )
                 }} 
 
@@ -178,7 +177,7 @@ function EachCategory({comingQuery}) {
 
       </div> */}
     </Query>
-</>
+</React.Fragment>
     )
 }
 

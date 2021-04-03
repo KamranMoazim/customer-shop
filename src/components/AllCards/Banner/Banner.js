@@ -11,7 +11,7 @@ import BannerImage3 from '../../../static/Untitled-1.jpg';
 class Banner extends Component {
   render() {
     return (
-      <>
+      <React.Fragment>
         {/* <div className='container'> */}
         <div className='wrap-b'>
           <div className='height-b'>
@@ -44,7 +44,7 @@ class Banner extends Component {
         </div>
 
         {/* </div> */}
-      </>
+      </React.Fragment>
     );
   }
 }

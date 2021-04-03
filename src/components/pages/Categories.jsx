@@ -7,11 +7,13 @@ import Card from '../Card.js'
 import {Helmet} from "react-helmet";
 
 function Categories() {
-    return (<>
+    return (<React.Fragment>
 
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>Iron Metal Steel Brass Categories</title>
+
+                <link rel="canonical" href="http://iqrasteelworks.com/categories" />
 
                 <meta name="description" content="Iqra Steel Works deals in all kind of Modern Iron, Steel, Brass and Lofty Furniture in Lahore. Iqra Steel Works makes the Quality Iron, Steel and Brass Items and Furniture which Decor your Home in a Unique way to make your House a Home " />
 
@@ -33,17 +35,21 @@ function Categories() {
         <Query query={AllCategories_QUERY}>
 
             {({ loading, error, data }) => {
+                
             if (loading) return <div>Fetching</div>
+
             if (error)   {
                 console.log(error)
-                return <div>Error</div>}
+                return <div>Error</div>
+            }
+
             const items = data.allCategories
             // console.log(items)
             return <Card data={items} />
             }}        
 
         </Query>
-        </>
+        </React.Fragment>
     )
 }
 

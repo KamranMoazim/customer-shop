@@ -7,7 +7,7 @@ function CarouselComponent({data=[]}) {
     // let { path, url } = useRouteMatch();
 
     if (data.length) {
-        return <>
+        return <React.Fragment>
             
             {data.map((each,index)=>{
                     return (<div style={{margin:"10px"}} key={index}>
@@ -28,7 +28,7 @@ function CarouselComponent({data=[]}) {
                         </Carousel>
                     </div>
     )})}
-        </>
+        </React.Fragment>
     }
 
     return (

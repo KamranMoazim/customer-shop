@@ -2,7 +2,6 @@ import React,{useState,useEffect} from 'react';
 import './BedCard.css';
 import {Link} from 'react-router-dom'
 
-
 const BedCard = ({data=[]}) => {
 
   const [workingData, setWorkingData] = useState(data)
@@ -52,12 +51,13 @@ const BedCard = ({data=[]}) => {
   }
 
     return (
-      <>
+      <React.Fragment>
         <div style={{ paddingLeft: '24px', paddingRight: '24px' }}>
           <div className='row'>
+            Loading
           </div>
         </div>
-      </>
+      </React.Fragment>
     );
 
 }

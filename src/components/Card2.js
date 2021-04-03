@@ -55,6 +55,9 @@ function Card2({heading="All Categories", buttonText="Show More", subCat="", seo
       <div className="main">
         <Helmet>
           <title>Iqra Steel Works All {toTitleCase(heading)} Collection</title>
+
+          <link rel="canonical" href={`https://iqrasteelworks.com/:${subCat}`} />
+
           <meta name="description" content={seoDesc} />
           <meta name="keywords" content={seoDesc} />
           {/* for Facebook */}

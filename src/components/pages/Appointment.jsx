@@ -129,7 +129,7 @@ const Appointment = () => {
   
 
   return (
-<>
+<React.Fragment>
 
       <Helmet>
           <meta charSet="utf-8" />
@@ -261,7 +261,7 @@ const Appointment = () => {
         );
       }}
     </Formik>
-</>
+</React.Fragment>
   );
 
 };

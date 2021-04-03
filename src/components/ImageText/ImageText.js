@@ -13,7 +13,7 @@ import img5 from '../../static/Untitled-2.jpg'
 class ImageText extends Component {
   render() {
     return (
-      <>
+      <React.Fragment>
         <div className='wrap-it'>
           {/* 1st 50% */}
           <div className='row'>
@@ -87,7 +87,7 @@ class ImageText extends Component {
 
         </div>
 
-      </>
+      </React.Fragment>
     );
   }
 }

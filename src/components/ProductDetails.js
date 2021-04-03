@@ -100,7 +100,7 @@ function ProductDetails({comingQuery}) {
 
 
           return (
-              <>
+              <React.Fragment>
               <h2 className='main-heading-it' style={{color:"black", textAlign:"center", marginTop:"30px"}}>
                 {item.name}
               </h2>
@@ -218,7 +218,7 @@ function ProductDetails({comingQuery}) {
                     </div>
                   </div>
                 </div>
-              </>
+              </React.Fragment>
           )
           }} 
 

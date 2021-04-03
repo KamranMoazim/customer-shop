@@ -24,6 +24,8 @@ function Home() {
                 <meta charSet="utf-8" />
                 <title>Iqra Steel Works</title>
 
+                <link rel="canonical" href="http://iqrasteelworks.com/" />
+
                 <meta name="description" content="Iqra Steel Works deals in all kind of Modern Iron, Steel, Brass and Lofty Furniture in Lahore. Iqra Steel Works makes the Quality Iron, Steel and Brass Items and Furniture which Decor your Home in a Unique way to make your House a Home " />
 
                 <meta name="keywords" content="Iron Furniture Brass Furniture Steel Furniture Modern Furniture Iron Gates Iron Sofa Outdoor furniture in Lahore Garden Furniture " />
@@ -55,9 +57,9 @@ function Home() {
                 const items = data.allCategories
                 // console.log(items);
                 return (
-                    <>                       
+                    <React.Fragment>                       
                         <BedCard data={items} />
-                    </>
+                    </React.Fragment>
                 )
                 }}        
                 

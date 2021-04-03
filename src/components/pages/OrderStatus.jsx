@@ -93,7 +93,7 @@ if (isAccount && isError){
 
 
   return (
-<>
+<React.Fragment>
 <Helmet>
                 <meta charSet="utf-8" />
                 <title>Check Your Order Status</title>
@@ -148,7 +148,7 @@ if (isAccount && isError){
         );
       }}
     </Formik>
-    </>
+    </React.Fragment>
   );
 };
 

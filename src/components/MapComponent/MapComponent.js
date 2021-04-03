@@ -4,7 +4,7 @@ import './MapComponent.css';
 class MapComponent extends Component {
   render() {
     return (
-      <>
+      <React.Fragment>
         <div className='row'>
           <div
             className='col-sm-12'
@@ -15,7 +15,7 @@ class MapComponent extends Component {
             </div>
           </div>
         </div>
-      </>
+      </React.Fragment>
     );
   }
 }

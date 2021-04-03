@@ -11,7 +11,7 @@ const SingleImage = () => {
 
 
     return (
-      <>
+      <React.Fragment>
         <div className='outer-si'>
           <div className='title-main-ac'>New Collections</div>
           <div className='row'>
@@ -27,7 +27,7 @@ const SingleImage = () => {
                 const items = data.latests
                 // console.log(data);
                 return (
-                    <>
+                    <React.Fragment>
                         {items.map((item,index)=>{
                             return  <div className="grid" key={index}>
                               <img src={item.image.url} alt={item.name} />
@@ -43,7 +43,7 @@ const SingleImage = () => {
                               </div>
                             </div>
                         })}
-                    </>
+                    </React.Fragment>
                 )
                 }}  
               </Query>
@@ -66,7 +66,7 @@ const SingleImage = () => {
           </div>
         </div>
         {/* <h3>Single Image</h3> */}
-      </>
+      </React.Fragment>
     );
 
 }

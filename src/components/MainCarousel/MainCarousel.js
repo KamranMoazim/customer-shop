@@ -26,7 +26,7 @@ import img16 from '../../static/1440 536 new 16.jpg';
 class MainCarousel extends Component {
   render() {
     return (
-      <>
+      <React.Fragment>
         <div className='outer-mc'>
           {/* Hero Image Start */}
           <div className='row'>
@@ -182,7 +182,7 @@ class MainCarousel extends Component {
 
           </Carousel>
         </div>
-      </>
+      </React.Fragment>
     );
   }
 }
